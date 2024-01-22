@@ -56,11 +56,18 @@ namespace UserInfo
                 {
                     ListCity.Height += 30;
                     ListCity.Items.Add(item.Name);
+
                 }
             }
             ListCity.Visibility = Visibility.Visible;
             ListCountres.Visibility = Visibility.Hidden;
 
+        }
+
+        private void ListCity_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            ListCity.Visibility = Visibility.Hidden;
+            Next.Visibility=Visibility.Visible;
         }
     }
     public class CityCountry

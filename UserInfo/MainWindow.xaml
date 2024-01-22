@@ -44,7 +44,20 @@
         <ListView x:Name="ListCity" 
                   BorderBrush="{x:Null}"
                   Background="LightGray" 
-                  Margin="331,237,23,110"
+                  Margin="331,237,23,110" SelectionChanged="ListCity_SelectionChanged"
                   Visibility="Hidden"/>
+        <Button x:Name="Next" Content="Next"
+                HorizontalAlignment="Left" 
+                Margin="450,355,0,0" VerticalAlignment="Top"
+                Height="30" Width="126"
+                Visibility="Hidden"
+                BorderBrush="{x:Null}"
+                >
+        <Button.Resources>
+            <Style TargetType="Border">
+                <Setter Property="CornerRadius" Value="8"/>
+            </Style>
+        </Button.Resources>
+        </Button>
     </Grid>
 </Window>
