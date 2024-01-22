@@ -1,0 +1,50 @@
+﻿<Window x:Class="UserInfo.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:UserInfo"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="600">
+    <Window.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="sorses/Dictionary1.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Window.Resources>
+    <Grid Height="420" Width="600" >
+        <Image Width="250" Margin="0,0,370,0" Source="/1.png"/>
+        <Rectangle Margin="71,65,0,320"/>
+        <TextBox Margin="79,72,293,327"/>
+        <TextBlock Text="Name" Margin="79,49,441,358"/>
+        <Rectangle Margin="332,67,0,323"/>
+        <TextBox Margin="340,72,32,328"/>
+        <TextBlock Text="SecondName" Margin="340,49,180,358"/>
+        <Rectangle Margin="71,145,0,245"/>
+        <TextBox Margin="79,149,293,250"/>
+        <TextBlock Text="PhoneNumber" Margin="79,127,441,280"/>
+        <Rectangle Margin="332,144,0,246"/>
+        <TextBox Margin="340,148,32,250"/>
+        <TextBlock Text="e-mail" Margin="340,126,180,281"/>
+        <Rectangle Margin="71,220,0,170" MouseLeftButtonDown="Click_Rectangle"/>
+
+        <TextBlock Text="Country" Margin="79,202,441,205"/>
+        <Rectangle Margin="332,220,0,170"/>
+        <TextBlock Text="City" Margin="340,202,180,205"/>
+        <ListView x:Name="ListCountres" 
+                  BorderBrush="{x:Null}"
+                  Background="LightGray" 
+                  Margin="70,237,284,115"
+                  Visibility="Hidden">
+            <ListViewItem Content="Russia" Selected="ListViewItem_Selected"/>
+            <ListViewItem Content="Belarus" Selected="ListViewItem_Selected"/>
+            <ListViewItem Content="Kazakhstan" Selected="ListViewItem_Selected"/>
+        </ListView>
+        <ListView x:Name="ListCity" 
+                  BorderBrush="{x:Null}"
+                  Background="LightGray" 
+                  Margin="331,237,23,110"
+                  Visibility="Hidden"/>
+    </Grid>
+</Window>
